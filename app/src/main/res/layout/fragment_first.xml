@@ -15,11 +15,11 @@
         android:layout_height="54dp"
         android:layout_gravity="bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:enabled="false"
-        android:visibility="visible"
         android:backgroundTint="#00FFFFFF"
+        android:enabled="false"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/butNext1"

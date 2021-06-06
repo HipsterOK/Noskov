@@ -61,6 +61,7 @@ class SecondFragment : Fragment() {
             }
             else numPost++
             butBack.isEnabled = true
+            butBack.visibility = View.VISIBLE
             run()
 
             Glide.with(context!!)
@@ -83,6 +84,7 @@ class SecondFragment : Fragment() {
             if(numPost==1 && numberStr==0){
                 numPost--
                 butBack.isEnabled = false
+                butBack.visibility = View.INVISIBLE
             }
             if(numPost>0){
                 numPost--
@@ -117,7 +119,7 @@ class SecondFragment : Fragment() {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val strResponse = response.body()!!.string()
+                val strResponse = response.body!!.string()
                 //creating json object
                 val jsonContact = JSONObject(strResponse)
                 //creating json array
